@@ -28,6 +28,17 @@ function rokon_css_js_calling(){
 add_action( 'wp_enqueue_scripts', 'rokon_css_js_calling');
 
 
+/*============================================================ 
+Google Fonts Enque
+==============================================================*/
+
+function rokon_google_fonts_enqueue(){
+    wp_enqueue_style( 'rokon_google_fonts','https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald:wght@200..700&display=swap',false );
+}
+
+add_action('wp_enqueue_scripts', 'rokon_google_fonts_enqueue');
+
+
 /*==========================================================
 Theme Functions
 ============================================================*/
@@ -50,7 +61,13 @@ function rokon_customizer_register($wp_customize){
     )));
 }
 
-add_action('customize_register','rokon_customizer_register')
+add_action('customize_register','rokon_customizer_register');
+
+/*========================================================================= 
+Nav menu 
+===========================================================================*/
+
+register_nav_menu( 'main_menu', __('Main Menu','rokon') );
 
 
 

@@ -21,10 +21,30 @@
                         <img src=" <?php echo get_theme_mod( 'rokon_logo'); ?>" alt="">
                     </a>
                 </div>
-                <div class="col-md-9"></div>
+                <div class="col-md-9">
+
+                    <?php wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id' => 'nav_manu') ); ?>
+                    <!-- <ul id = "nav_manu">
+                        <li> <a href="#">Home</a> </li>
+                        <li> <a href="#">Home</a>
+                            <ul>
+                                <li> <a href="#">Test</a> </li>
+                                <li> <a href="#">Test</a> </li>
+                                <li> <a href="#">Test</a> </li>
+                                <li> <a href="#">Test Test Test Test Test Test Test Test</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">Home</a> </li>
+                        <li> <a href="#">Home</a> </li>
+                        <li> <a href="#">Home</a> </li>
+                        <li> <a href="#">Home</a> </li>
+                    </ul> -->
+                </div>
             </div>
         </div>
     </div>
+
+    test
 
     <?php wp_footer() ?>
 </body>
