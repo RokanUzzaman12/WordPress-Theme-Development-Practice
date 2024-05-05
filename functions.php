@@ -44,6 +44,9 @@ Theme Functions
 ============================================================*/
 
 function rokon_customizer_register($wp_customize){
+
+    // Header logo section
+
     $wp_customize->add_section('rokon_header',array(
         'title'=>__("Header Area","rokon"),
         'description'=>"If you want to update your header area, You can do it here"
@@ -59,6 +62,30 @@ function rokon_customizer_register($wp_customize){
         'description'=>"If you want to change or update your logo you can do it here",
         'section'=>"rokon_header"
     )));
+
+    // Menu position section
+
+    $wp_customize->add_section('rokon_menu_position',array(
+        'title'=> __("Menu Position","rokon"),
+        'description'=>"If you want to change your menu position you can do it here"
+    ));
+
+    $wp_customize->add_setting('rokon_menu_position_setting',array(
+        'default'=>'right_menu'
+    ));
+
+    $wp_customize->add_control('rokon_menu_position_setting',array(
+        'label'=>"Menu Position",
+        'description'=>"Select your menu position",
+        'setting'=>'rokon_menu_position_setting',
+        'section'=>'rokon_menu_position',
+        'type'=>'radio',
+        'choices'=> array(
+            'left_menu'=> __("Left Menu",'rokon'),
+            'right_menu'=> __("Right Menu",'rokon'),
+            'center_menu'=> __("Center Menu",'rokon')
+        )
+    ));
 }
 
 add_action('customize_register','rokon_customizer_register');

@@ -25,6 +25,10 @@ Header Area
     padding: 20px 0;
 }
 
+#header_area .col-md-3 img{
+  max-width: 200px;
+}
+
 #header_area .col-md-9 ul {
     font-family: "Oswald", sans-serif;
     margin: 10px 0 0;
@@ -105,3 +109,50 @@ Header Area
     background: #ea1a70;
     color: #fff;
   }
+
+  /*==========================================================
+    Dynamic menu position
+  ============================================================*/
+
+  #header_area.left_menu .col-md-3{
+    order:2;
+  }
+
+  #header_area.left_menu .col-md-9{
+    order:1;
+  }
+
+  #header_area.left_menu .col-md-9 ul{
+    text-align: left;
+  }
+
+  #header_area.right_menu .col-md-3{
+    order:1;
+  }
+
+  #header_area.right_menu .col-md-9{
+    order:2;
+  }
+
+  #header_area.right_menu .col-md-9 ul{
+    text-align: right;
+  }
+
+  #header_area.center_menu .col-md-3{
+    width: 100% !important;
+    text-align: center;
+    margin-bottom:10px;
+  }
+
+  #header_area.center_menu .col-md-3 img{
+    max-width: 200px;
+  }
+
+  #header_area.center_menu .col-md-9{
+    width: 100% !important;
+  }
+
+  #header_area.center_menu .col-md-9 ul{
+    text-align: center;
+  }
+
